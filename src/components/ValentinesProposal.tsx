@@ -87,7 +87,7 @@ export default function ValentinesProposal() {
             key="step-0"
             className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
             transition={{ duration: 1 }}
-            initial={{ opacity: 0.5 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
@@ -99,7 +99,7 @@ export default function ValentinesProposal() {
             key="step-1"
             className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
             transition={{ duration: 3 }}
-            initial={{ opacity: 0.5 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
@@ -110,7 +110,7 @@ export default function ValentinesProposal() {
           <motion.div
             key="step-2"
             transition={{ duration: 3 }}
-            initial={{ opacity: 0.5 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="flex flex-col items-center"
@@ -171,12 +171,12 @@ export default function ValentinesProposal() {
             key="step-3"
             className={`text-2xl font-semibold mb-4 flex flex-col justify-center items-center ${playfairDisplay.className}`}
             transition={{ duration: 1 }}
-            initial={{ opacity: 0.5 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Hehehe I love you! I can't wait to see you and I have you like the other surprise I have for you 💕
-            <p className="text-sm mt-4">I hop you liked this hehe</p>
+            <p className="text-center">Hehehe I love you! I can't wait to see you and I have you like the other surprise I have for you 💕</p>
+            <p className="text-sm mt-4">I hope you liked this hehe</p>
             <Image
               src="/hamster_jumping.gif"
               alt="Hamster Feliz"
