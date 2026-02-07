@@ -87,7 +87,7 @@ export default function ValentinesProposal() {
             key="step-0"
             className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
             transition={{ duration: 1 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
@@ -99,7 +99,7 @@ export default function ValentinesProposal() {
             key="step-1"
             className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
             transition={{ duration: 3 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
@@ -110,7 +110,7 @@ export default function ValentinesProposal() {
           <motion.div
             key="step-2"
             transition={{ duration: 3 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="flex flex-col items-center"
@@ -130,7 +130,7 @@ export default function ValentinesProposal() {
             </div>
 
             <h2
-              className={`text-5xl font-semibold mb-8 ${playfairDisplay.className}`}
+              className={`text-2xl font-semibold mb-8 ${playfairDisplay.className}`}
             >
               Jess, will you be my Valentine this year and forever?
             </h2>
@@ -169,9 +169,9 @@ export default function ValentinesProposal() {
         {step === 3 && (
           <motion.div
             key="step-3"
-            className={`text-4xl font-semibold mb-4 flex flex-col justify-center items-center ${playfairDisplay.className}`}
+            className={`text-2xl font-semibold mb-4 flex flex-col justify-center items-center ${playfairDisplay.className}`}
             transition={{ duration: 1 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
