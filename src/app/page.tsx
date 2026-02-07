@@ -6,12 +6,22 @@ import PhotoPairGame from "../components/PhotoPairGame";
 import ValentinesProposal from "@/components/ValentinesProposal";
 import TextFooter from "@/components/TextFooter";
 import OrientationGuard from "@/components/OrientationGuard";
+import LoginScreen from "@/components/LoginScreen";
 
 const ANIM_DURATION = 2;
 
 export default function Home() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoginTransitioning, setIsLoginTransitioning] = useState(false);
   const [showValentinesProposal, setShowValentinesProposal] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleAuthenticated = () => {
+    setIsLoginTransitioning(true);
+    setTimeout(() => {
+      setIsAuthenticated(true);
+    }, ANIM_DURATION * 1000);
+  };
 
   const handleShowProposal = () => {
     setIsTransitioning(true);
@@ -23,9 +33,17 @@ export default function Home() {
   return (
     <OrientationGuard>
       <main className="flex items-center justify-center min-h-screen bg-black overflow-hidden relative">
-        {!showValentinesProposal ? (
+        {!isAuthenticated ? (
           <motion.div
             initial={{ opacity: 1 }}
+            animate={{ opacity: isLoginTransitioning ? 0 : 1 }}
+            transition={{ duration: ANIM_DURATION }}
+          >
+            <LoginScreen onAuthenticated={handleAuthenticated} />
+          </motion.div>
+        ) : !showValentinesProposal ? (
+          <motion.div
+            initial={{ opacity: 0 }}
             animate={{ opacity: isTransitioning ? 0 : 1 }}
             transition={{ duration: ANIM_DURATION }}
             className="flex flex-col items-center"
